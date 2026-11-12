@@ -116,6 +116,60 @@ body{font-family:'Nunito',sans-serif}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
+
+/* BIGGER, clearer presentation typography */
+html{font-size:18px}
+body{font-size:18px;font-family:'Nunito',sans-serif}
+.title{font-size:clamp(3rem,6.2vw,6.1rem);line-height:1.12}
+.intro{font-size:clamp(1.18rem,1.75vw,1.48rem);line-height:1.8;max-width:1100px}
+.kicker{font-size:.92rem;padding:9px 17px}
+.point{padding:17px 21px}
+.point b{font-size:1.35rem}
+.point p{font-size:1.12rem;line-height:1.72}
+.fact{padding:20px}
+.fact b{font-size:1.9rem}
+.fact span{font-size:1.02rem;line-height:1.65}
+.photo figcaption{font-size:.95rem;padding:12px 15px}
+.note{font-size:.92rem;line-height:1.7}
+.cover .title{font-size:clamp(4rem,10vw,9rem)}
+.slide .sticker{font-size:1rem;padding:10px 17px}
+.photo{cursor:zoom-in;position:relative}
+.photo:after{content:"↗ XEM ẢNH";position:absolute;right:12px;top:12px;padding:7px 12px;border-radius:999px;background:#1b100bdc;color:#ffe8b9;font:800 .72rem 'Nunito';letter-spacing:.08em;opacity:0;transform:translateY(5px);transition:.25s;pointer-events:none}
+.photo:hover:after{opacity:1;transform:none}
+/* Fullscreen interactive image viewer */
+.viewer{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:5vh 7vw;background:#100904f2;backdrop-filter:blur(14px)}
+.viewer.open{display:flex;animation:viewerIn .3s ease both}
+@keyframes viewerIn{from{opacity:0}to{opacity:1}}
+.viewer figure{margin:0;max-width:min(82vw,1200px);max-height:84vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+.viewer img{max-width:100%;max-height:75vh;object-fit:contain;border:3px solid #e9c987;border-radius:26px;box-shadow:0 25px 90px #000b;cursor:pointer;transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .3s}
+.viewer img.spin{transform:perspective(1000px) rotateY(360deg) scale(.92);filter:brightness(1.15)}
+.viewer figcaption{font:800 1.15rem 'Nunito';color:#ffedc9;text-align:center}
+.viewer-tools{position:absolute;bottom:3vh;display:flex;gap:12px;align-items:center}
+.viewer-btn{border:1px solid #e9c987;border-radius:18px;background:#382515;color:#ffedc9;padding:12px 20px;font:800 1rem 'Nunito';cursor:pointer;box-shadow:0 5px 0 #090503;transition:.2s}
+.viewer-btn:hover{background:#e9c987;color:#1b1009;transform:translateY(-3px)}
+.viewer-close{position:absolute;top:22px;right:26px;font-size:2rem;width:52px;height:52px;border-radius:50%}
+.viewer-hint{position:absolute;top:26px;left:28px;color:#e9c987;font:700 .9rem 'Nunito'}
+.photo.selected{animation:photoSelect .55s ease}
+@keyframes photoSelect{0%{transform:scale(1)}45%{transform:scale(1.055) rotate(2deg)}100%{transform:scale(1)}}
+@media(max-width:760px){
+ html,body{font-size:16px}
+ .title{font-size:clamp(2.8rem,10vw,4.4rem)}
+ .intro{font-size:1.08rem;line-height:1.75}
+ .point{padding:14px 16px}
+ .point b{font-size:1.18rem}
+ .point p{font-size:1rem;line-height:1.65}
+ .fact b{font-size:1.5rem}
+ .fact span{font-size:.88rem}
+ .photo figcaption{font-size:.82rem}
+ .slide .sticker{font-size:.78rem}
+ .viewer{padding:8vh 4vw}
+ .viewer figure{max-width:94vw}
+ .viewer img{max-height:67vh}
+ .viewer-tools{bottom:2vh;gap:7px}
+ .viewer-btn{padding:10px 13px;font-size:.85rem}
+ .viewer-hint{font-size:.72rem;top:16px;left:14px}
+ .viewer-close{top:12px;right:12px}
+}
 </style></head><body>
 <main class="deck" id="deck">
 <section class="slide cover active" data-no="01"><div class="kicker">LỊCH SỬ 10 · KẾT NỐI TRI THỨC · CHỦ ĐỀ 3</div><h1 class="title">NHỮNG NỀN<br><em>VĂN MINH</em><br>THẾ GIỚI</h1><div class="goldline"></div><p class="intro">Phương Đông và phương Tây thời kì cổ – trung đại<br>Điều kiện hình thành · Thành tựu · Câu chuyện · Di sản hôm nay</p><p class="note">Bài 5 và Bài 6 · Trình chiếu bằng nút mũi tên hoặc phím ← →</p></section>
@@ -145,9 +199,28 @@ body{font-family:'Nunito',sans-serif}
 <section class="slide cover" data-no="13"><div class="cover-sticker">✦ DI SẢN ✦</div><div class="kicker">Kết luận</div><h2 class="title">QUÁ KHỨ ĐỂ HIỂU<br><em>HIỆN TẠI & TƯƠNG LAI</em></h2><div class="goldline"></div><p class="intro">Mỗi nền văn minh là một cách con người thích nghi với tự nhiên, tổ chức xã hội và sáng tạo tri thức. Tìm hiểu lịch sử giúp chúng ta trân trọng sự đa dạng, hiểu nguồn gốc di sản và có trách nhiệm gìn giữ chúng.</p><p class="note">Tư liệu học tập: SGK Lịch sử 10 – Kết nối tri thức, Chủ đề 3, Bài 5 và Bài 6; UNESCO World Heritage Centre; Encyclopaedia Britannica; National Geographic Education; Wikimedia Commons (ảnh minh họa).</p></section>
 </main>
 <div class="controls"><button class="arrow" id="prev" aria-label="Slide trước">←</button><div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="dots" id="dots" aria-label="Chọn slide"></div><div class="counter" id="counter">01 / 13</div><button class="arrow" id="next" aria-label="Slide tiếp">→</button></div>
+<div class="viewer" id="viewer" aria-label="Trình xem ảnh" aria-modal="true" role="dialog"><span class="viewer-hint">CHẠM VÀO ẢNH ĐỂ XOAY 360° · DÙNG MŨI TÊN ĐỂ ĐỔI ẢNH</span><button class="viewer-btn viewer-close" id="viewerClose" aria-label="Đóng">×</button><figure><img id="viewerImg" alt=""><figcaption id="viewerCaption"></figcaption></figure><div class="viewer-tools"><button class="viewer-btn" id="viewerPrev">← Ảnh trước</button><button class="viewer-btn" id="viewerSpin">✦ Xoay ảnh</button><button class="viewer-btn" id="viewerNext">Ảnh tiếp →</button></div></div>
 <script>
 const slides=[...document.querySelectorAll('.slide')],dotsBox=document.getElementById('dots'),counter=document.getElementById('counter'),progress=document.getElementById('progress'),prev=document.getElementById('prev'),next=document.getElementById('next');let currentIndex=0;
 slides.forEach((s,i)=>{const stickers=['🏺','🧿','📜','🪷','✨','🏛️','🗺️','🔎','💫','📚','🪙','🌟','🦉'];const st=document.createElement('span');st.className='sticker'+(i%3===1?' left':'');st.textContent=stickers[i]+' '+['Khám phá','Bạn có biết?','Fact thú vị','Mở khóa bí mật'][i%4];s.appendChild(st);const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','Đến slide '+(i+1));b.title='Slide '+(i+1);b.addEventListener('click',()=>show(i));dotsBox.appendChild(b)});
 function show(i){const old=currentIndex;const target=Math.max(0,Math.min(slides.length-1,i));const direction=target>=old?'next':'prev';currentIndex=target;slides.forEach((s,j)=>{s.classList.toggle('active',j===currentIndex);s.dataset.direction=direction;s.setAttribute('aria-hidden',j===currentIndex?'false':'true');if(j===currentIndex)s.scrollTop=0});[...dotsBox.children].forEach((d,j)=>{d.classList.toggle('active',j===currentIndex);d.setAttribute('aria-current',j===currentIndex?'step':'false')});counter.textContent=String(currentIndex+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');progress.style.width=((currentIndex+1)/slides.length*100)+'%';prev.disabled=currentIndex===0;next.disabled=currentIndex===slides.length-1;history.replaceState(null,'','#slide-'+(currentIndex+1))}
-prev.addEventListener('click',()=>show(currentIndex-1));next.addEventListener('click',()=>show(currentIndex+1));document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();show(currentIndex+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(currentIndex-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1)});let touchX=0;document.getElementById('deck').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});document.getElementById('deck').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>65)show(currentIndex+(dx<0?1:-1))},{passive:true});const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
+prev.addEventListener('click',()=>show(currentIndex-1));next.addEventListener('click',()=>show(currentIndex+1));document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();show(currentIndex+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(currentIndex-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1)});let touchX=0;document.getElementById('deck').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});document.getElementById('deck').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>65)show(currentIndex+(dx<0?1:-1))},{passive:true});
+/* Click-to-open image gallery: spin each image and browse the whole deck */
+const allPhotos=[...document.querySelectorAll('.photo')];
+const viewer=document.getElementById('viewer'),viewerImg=document.getElementById('viewerImg'),viewerCaption=document.getElementById('viewerCaption');
+let photoIndex=0;
+function renderPhoto(){const p=allPhotos[photoIndex],im=p.querySelector('img'),cap=p.querySelector('figcaption');viewerImg.src=im.currentSrc||im.src;viewerImg.alt=im.alt||'';viewerCaption.textContent=(cap?cap.innerText:im.alt)+'  ·  '+(photoIndex+1)+'/'+allPhotos.length;viewerImg.classList.remove('spin');}
+function openPhoto(i){photoIndex=(i+allPhotos.length)%allPhotos.length;renderPhoto();viewer.classList.add('open');document.body.style.overflow='hidden';}
+function closePhoto(){viewer.classList.remove('open');document.body.style.overflow='';}
+allPhotos.forEach((p,i)=>p.addEventListener('click',()=>{p.classList.remove('selected');void p.offsetWidth;p.classList.add('selected');openPhoto(i)}));
+document.getElementById('viewerClose').addEventListener('click',closePhoto);
+document.getElementById('viewerPrev').addEventListener('click',()=>{photoIndex=(photoIndex-1+allPhotos.length)%allPhotos.length;renderPhoto()});
+document.getElementById('viewerNext').addEventListener('click',()=>{photoIndex=(photoIndex+1)%allPhotos.length;renderPhoto()});
+function spinPhoto(){viewerImg.classList.remove('spin');void viewerImg.offsetWidth;viewerImg.classList.add('spin');}
+viewerImg.addEventListener('click',spinPhoto);
+document.getElementById('viewerSpin').addEventListener('click',spinPhoto);
+viewer.addEventListener('click',e=>{if(e.target===viewer)closePhoto()});
+document.addEventListener('keydown',e=>{if(!viewer.classList.contains('open'))return;if(e.key==='Escape')closePhoto();if(e.key==='ArrowRight'){photoIndex=(photoIndex+1)%allPhotos.length;renderPhoto()}if(e.key==='ArrowLeft'){photoIndex=(photoIndex-1+allPhotos.length)%allPhotos.length;renderPhoto()}});
+
+const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
 </script></body></html>
