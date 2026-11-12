@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1b100a"><meta name="description" content="Lịch sử 10 Kết nối tri thức: các nền văn minh phương Đông và phương Tây thời cổ – trung đại."><title>Dấu Ấn Văn Minh | Lịch sử 10</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#160e09;--panel:#28190f;--gold:#e6c27b;--cream:#fff3df;--muted:#d5c1a3;--line:#8d673b}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--cream);font-family:'Be Vietnam Pro',sans-serif}button{font:inherit}
@@ -15,9 +15,110 @@
 .note{color:#cbb693;font-size:.75rem;line-height:1.5;margin-top:12px}.controls{position:fixed;z-index:20;left:0;right:0;bottom:0;display:flex;align-items:center;gap:14px;padding:14px clamp(15px,3vw,42px) max(14px,env(safe-area-inset-bottom));background:linear-gradient(0deg,#100904f5,#100904a8 72%,transparent)}.arrow{width:50px;height:50px;flex:0 0 50px;border-radius:50%;border:1px solid var(--gold);background:#2b1a10;color:#ffe5ae;font-size:1.55rem;cursor:pointer}.arrow:disabled{opacity:.25}.arrow:hover:not(:disabled){background:var(--gold);color:#1b1009}.progress-wrap{height:3px;flex:1;background:#765431;max-width:240px}.progress{height:100%;width:0;background:linear-gradient(90deg,#a77731,#ffe3a0);transition:width .3s}.dots{display:flex;gap:8px;align-items:center}.dot{width:7px;height:7px;border:0;border-radius:50%;background:#8f7047;padding:0;cursor:pointer}.dot.active{background:#ffe0a0;transform:scale(1.5)}.counter{min-width:54px;text-align:right;color:#f1dfc2;font-size:.8rem;font-weight:700}
 @media(max-width:760px){.slide{padding:34px 24px 105px;justify-content:flex-start}.slide:before{inset:8px}.layout{grid-template-columns:1fr;gap:17px}.title{font-size:clamp(2.15rem,9vw,3.5rem)}.intro{font-size:.92rem;margin-bottom:16px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.photo img{height:125px}.photo:first-child img{height:190px}.photo figcaption{font-size:.68rem;padding:7px}.triptych{gap:8px}.triptych .photo img,.triptych .photo:first-child img{height:115px}.triptych .photo figcaption{font-size:.62rem}.point{padding:9px 12px}.point p{font-size:.83rem}.factbar{gap:7px}.fact{padding:10px}.fact b{font-size:1.2rem}.fact span{font-size:.72rem}.controls{gap:8px;padding:9px 12px max(12px,env(safe-area-inset-bottom))}.arrow{width:43px;height:43px;flex-basis:43px}.dots{gap:5px}.dot{width:6px;height:6px}.progress-wrap{max-width:none}}
 @media(max-height:650px) and (min-width:761px){.slide{padding-top:24px;padding-bottom:80px}.photo img{height:150px}.photo:first-child img{height:210px}.point{padding:8px 12px}.point p{font-size:.82rem}.title{font-size:clamp(2rem,4vw,3.7rem)}}
+
+/* Cute editorial polish — warm historical palette */
+:root{--gold:#e9c987;--cream:#fff6e7;--muted:#e0cba9}
+body{font-family:'Nunito',sans-serif}
+.title,.fact b{font-family:'Baloo 2','Nunito',sans-serif;font-weight:800;letter-spacing:.005em}
+.title{line-height:1.12;text-wrap:balance}
+.intro,.point p,.fact span,.note{font-family:'Nunito',sans-serif}
+.kicker{display:inline-flex;align-self:flex-start;align-items:center;gap:8px;border:1px solid #d5ad6b66;background:#382515;border-radius:999px;padding:7px 14px;letter-spacing:.1em;font-size:.72rem}
+.cover .kicker{align-self:center}
+.cover .title{line-height:1.16;margin:24px auto 26px;letter-spacing:.025em}
+.cover .intro{line-height:1.9}
+.cover-sticker{display:inline-flex;align-items:center;justify-content:center;padding:9px 19px;border:1px solid #f2d79c;border-radius:999px;background:#4a321d;color:#ffe8b9;font:800 1rem 'Baloo 2';transform:rotate(-4deg);box-shadow:0 8px 0 #120a05,0 10px 25px #0005;margin:8px 0 18px}
+.point,.fact{border:1px solid #b58b4d55;border-left:4px solid var(--gold);border-radius:18px 18px 18px 6px;background:linear-gradient(135deg,#3a2718e8,#24170feF);box-shadow:0 8px 20px #0002;transition:transform .25s,box-shadow .25s}
+.point:hover,.fact:hover{transform:translateY(-4px) rotate(-.3deg);box-shadow:0 14px 25px #0004}
+.point b{font-family:'Baloo 2';font-size:1.08rem}
+.photo{border:2px solid #d0a96d88;border-radius:22px 22px 22px 8px;overflow:hidden;box-shadow:0 12px 25px #0005;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.photo:hover{transform:translateY(-7px) rotate(1deg) scale(1.015);box-shadow:0 18px 34px #0007}
+.photo img{transition:transform .65s cubic-bezier(.2,.8,.2,1);filter:saturate(.92) contrast(1.04)}
+.photo:hover img{transform:scale(1.07)}
+.photo figcaption{background:#20140de8;font-family:'Nunito';font-weight:700}
+.fact{border-radius:18px;padding:17px}
+.slide:after{content:"✦";position:absolute;right:5.5%;top:8%;color:#e9c98755;font-size:clamp(3rem,8vw,7rem);font-family:'Baloo 2';pointer-events:none;transform:rotate(12deg)}
+.slide:nth-child(3n):after{content:"✧";right:7%;top:auto;bottom:14%;transform:rotate(-12deg)}
+.slide:nth-child(3n + 1):after{content:"✿";left:4%;right:auto;top:12%;font-size:3rem;transform:rotate(-14deg)}
+.slide .sticker{position:absolute;z-index:3;right:clamp(20px,5vw,72px);top:clamp(22px,5vh,55px);display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border:1px solid #e9c987aa;border-radius:999px;background:#51371fdc;color:#ffedc9;font:800 .82rem 'Baloo 2';box-shadow:0 5px 0 #120a06;transform:rotate(4deg);pointer-events:none}
+.slide .sticker.left{left:clamp(20px,5vw,72px);right:auto;top:auto;bottom:clamp(95px,12vh,130px);transform:rotate(-5deg)}
+/* Individual slide compositions: deliberately varied, not a repeated three-photo template */
+.slide:nth-child(2) .gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+.slide:nth-child(2) .photo:first-child{grid-column:1 / -1}
+.slide:nth-child(3) .triptych{grid-template-columns:1.35fr 1fr 1fr;align-items:stretch}
+.slide:nth-child(3) .photo:first-child{transform:translateY(-12px)}
+.slide:nth-child(4) .layout{grid-template-columns:1.12fr .88fr}
+.slide:nth-child(4) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(4) .photo:first-child{grid-row:span 2;grid-column:auto}
+.slide:nth-child(4) .photo:first-child img{height:clamp(300px,55vh,500px)}
+.slide:nth-child(5) .layout{grid-template-columns:.9fr 1.1fr}
+.slide:nth-child(5) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(5) .photo:first-child{grid-column:span 2}
+.slide:nth-child(6) .layout{grid-template-columns:1fr 1fr}
+.slide:nth-child(6) .gallery{grid-template-columns:1fr 1fr;transform:rotate(1deg)}
+.slide:nth-child(6) .photo:first-child{grid-column:auto}
+.slide:nth-child(6) .photo:last-child{grid-column:1 / -1}
+.slide:nth-child(7) .layout{grid-template-columns:1.1fr .9fr}
+.slide:nth-child(7) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(7) .photo:first-child{grid-column:1 / -1}
+.slide:nth-child(8) .layout{grid-template-columns:.95fr 1.05fr}
+.slide:nth-child(8) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(8) .photo:first-child{grid-row:span 2;grid-column:auto}
+.slide:nth-child(8) .photo:first-child img{height:clamp(300px,50vh,450px)}
+.slide:nth-child(9) .layout{grid-template-columns:1.05fr .95fr}
+.slide:nth-child(9) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(9) .photo:first-child{grid-column:1 / -1}
+.slide:nth-child(10) .layout{grid-template-columns:1fr 1fr}
+.slide:nth-child(10) .gallery{grid-template-columns:1fr}
+.slide:nth-child(10) .photo:first-child{grid-column:auto}
+.slide:nth-child(10) .photo img,.slide:nth-child(10) .photo:first-child img{height:clamp(110px,17vh,180px)}
+.slide:nth-child(11) .layout{grid-template-columns:1.1fr .9fr}
+.slide:nth-child(11) .gallery{grid-template-columns:1fr 1fr}
+.slide:nth-child(11) .photo:first-child{grid-column:1 / -1}
+.slide:nth-child(12) .triptych{grid-template-columns:1fr 1.25fr 1fr;align-items:center}
+.slide:nth-child(12) .photo:nth-child(2){transform:translateY(-18px)}
+.slide:nth-child(13) .title{font-size:clamp(2.8rem,7vw,6.4rem);line-height:1.2;max-width:1050px}
+.slide:nth-child(13) .intro{font-size:clamp(1rem,1.6vw,1.28rem);line-height:1.95}
+.slide:nth-child(13) .note{max-width:900px;line-height:1.8}
+/* Direction-aware transitions */
+.slide{animation:none;transform-origin:50% 55%}
+.slide.active{animation:slideEnter .68s cubic-bezier(.2,.8,.2,1) both}
+.slide.active[data-direction="next"]{animation-name:slideFromRight}
+.slide.active[data-direction="prev"]{animation-name:slideFromLeft}
+@keyframes slideFromRight{0%{opacity:0;transform:translateX(8%) scale(.96);filter:blur(5px)}65%{opacity:1;transform:translateX(-.6%) scale(1.005);filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
+@keyframes slideFromLeft{0%{opacity:0;transform:translateX(-8%) scale(.96);filter:blur(5px)}65%{opacity:1;transform:translateX(.6%) scale(1.005);filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
+@keyframes slideEnter{0%{opacity:0;transform:scale(.93) rotateY(-5deg);filter:blur(4px)}100%{opacity:1;transform:none;filter:none}}
+.slide.active .kicker{animation:popIn .55s .08s both}
+.slide.active .title{animation:popIn .65s .13s both}
+.slide.active .intro{animation:popIn .65s .2s both}
+.slide.active .point,.slide.active .photo,.slide.active .fact{animation:cardPop .6s both}
+.slide.active .point:nth-child(2),.slide.active .photo:nth-child(2),.slide.active .fact:nth-child(2){animation-delay:.09s}
+.slide.active .point:nth-child(3),.slide.active .photo:nth-child(3),.slide.active .fact:nth-child(3){animation-delay:.17s}
+@keyframes popIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes cardPop{from{opacity:0;transform:translateY(20px) scale(.96) rotate(-1deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(0)}}
+.controls{backdrop-filter:blur(10px)}
+.arrow{border-radius:18px 18px 18px 7px;box-shadow:0 5px 0 #100904;transition:transform .2s,background .2s}
+.arrow:hover:not(:disabled){transform:translateY(-3px) rotate(-4deg)}
+.dot{transition:transform .2s,background .2s}
+@media(max-width:760px){
+ .slide .sticker{top:12px;right:22px;font-size:.68rem;padding:6px 10px}
+ .slide .sticker.left{left:20px;bottom:85px}
+ .slide:after{font-size:2.8rem;top:9%;right:7%}
+ .cover .title{line-height:1.18;margin:22px auto}
+ .slide:nth-child(n) .layout{grid-template-columns:1fr}
+ .slide:nth-child(n) .gallery{transform:none;grid-template-columns:1fr 1fr}
+ .slide:nth-child(n) .gallery .photo:first-child{grid-column:1 / -1;grid-row:auto}
+ .slide:nth-child(n) .gallery .photo:first-child img{height:190px}
+ .slide:nth-child(3) .triptych,.slide:nth-child(12) .triptych{grid-template-columns:1fr 1fr}
+ .slide:nth-child(3) .triptych .photo:first-child,.slide:nth-child(12) .triptych .photo:nth-child(2){transform:none}
+ .slide:nth-child(12) .triptych .photo:nth-child(2){grid-column:1 / -1}
+ .slide:nth-child(13) .title{font-size:clamp(2.35rem,9vw,4rem);line-height:1.22}
+ .slide:nth-child(13) .intro{line-height:1.8}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
 </style></head><body>
 <main class="deck" id="deck">
-<section class="slide cover active" data-no="01"><div class="seal">HỌC<br>SỬ</div><div class="kicker">LỊCH SỬ 10 · KẾT NỐI TRI THỨC · CHỦ ĐỀ 3</div><h1 class="title">NHỮNG NỀN<br><em>VĂN MINH</em><br>THẾ GIỚI</h1><div class="goldline"></div><p class="intro">Phương Đông và phương Tây thời kì cổ – trung đại<br>Điều kiện hình thành · Thành tựu · Câu chuyện · Di sản hôm nay</p><p class="note">Bài 5 và Bài 6 · Trình chiếu bằng nút mũi tên hoặc phím ← →</p></section>
+<section class="slide cover active" data-no="01"><div class="kicker">LỊCH SỬ 10 · KẾT NỐI TRI THỨC · CHỦ ĐỀ 3</div><h1 class="title">NHỮNG NỀN<br><em>VĂN MINH</em><br>THẾ GIỚI</h1><div class="goldline"></div><p class="intro">Phương Đông và phương Tây thời kì cổ – trung đại<br>Điều kiện hình thành · Thành tựu · Câu chuyện · Di sản hôm nay</p><p class="note">Bài 5 và Bài 6 · Trình chiếu bằng nút mũi tên hoặc phím ← →</p></section>
 
 <section class="slide" data-no="02"><div class="kicker">01 · Khái niệm nền tảng</div><h2 class="title">Văn minh là gì?</h2><div class="layout"><div class="textcol"><p class="intro">Văn minh là trạng thái phát triển cao của văn hóa, thể hiện ở những thành tựu vật chất và tinh thần mà con người sáng tạo ra trong lịch sử.</p><div class="points"><div class="point"><b>Văn hóa</b><p>Tổng thể những giá trị vật chất và tinh thần do con người sáng tạo, tích lũy.</p></div><div class="point"><b>Văn minh</b><p>Nhấn mạnh trình độ phát triển và những thành tựu nổi bật của xã hội.</p></div><div class="point"><b>Dấu hiệu nhận biết</b><p>Nhà nước, đô thị, chữ viết, tri thức khoa học, nghệ thuật, kiến trúc và thiết chế xã hội.</p></div></div></div><div class="gallery"><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/All_Gizah_Pyramids.jpg" alt="Quần thể kim tự tháp Giza"><figcaption><strong>Kiến trúc:</strong> kim tự tháp Giza, Ai Cập</figcaption></figure><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Code_of_Hammurabi_IMG_1936.JPG" alt="Bia luật Hammurabi"><figcaption>Bia luật Hammurabi</figcaption></figure><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon_from_west.jpg" alt="Đền Parthenon"><figcaption>Đền Parthenon, Hy Lạp</figcaption></figure></div></div></section>
 
@@ -41,12 +142,12 @@
 
 <section class="slide" data-no="12"><div class="kicker">11 · Di sản trong thế giới hôm nay</div><h2 class="title">Những thành tựu vẫn hiện diện quanh ta</h2><p class="intro">Các nền văn minh cổ – trung đại không chỉ để lại phế tích. Nhiều ý tưởng và thành tựu đã được kế thừa, biến đổi và tiếp tục có mặt trong đời sống hiện đại.</p><div class="triptych"><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Arabic_numerals_in_use.jpg" alt="Chữ số trong sử dụng"><figcaption><strong>Toán học</strong> · hệ thập phân và số 0 từ truyền thống Ấn Độ</figcaption></figure><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Roman_law.jpg" alt="Tư liệu luật La Mã"><figcaption><strong>Luật pháp</strong> · di sản pháp luật La Mã</figcaption></figure><figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Greek_columns.jpg" alt="Cột kiến trúc Hy Lạp"><figcaption><strong>Kiến trúc</strong> · thức cột Hy Lạp cổ điển</figcaption></figure></div><div class="factbar"><div class="fact"><b>Tri thức</b><span>Toán học, thiên văn, y học và kĩ thuật được tích lũy qua nhiều thế hệ.</span></div><div class="fact"><b>Thể chế</b><span>Tư tưởng chính trị, luật pháp và quản trị tiếp tục được nghiên cứu.</span></div><div class="fact"><b>Di sản</b><span>Công trình cổ là nguồn tư liệu, giáo dục và du lịch văn hóa.</span></div></div></section>
 
-<section class="slide cover" data-no="13"><div class="seal">DI SẢN</div><div class="kicker">Kết luận</div><h2 class="title">QUÁ KHỨ ĐỂ HIỂU<br><em>HIỆN TẠI & TƯƠNG LAI</em></h2><div class="goldline"></div><p class="intro">Mỗi nền văn minh là một cách con người thích nghi với tự nhiên, tổ chức xã hội và sáng tạo tri thức. Tìm hiểu lịch sử giúp chúng ta trân trọng sự đa dạng, hiểu nguồn gốc di sản và có trách nhiệm gìn giữ chúng.</p><p class="note">Tư liệu học tập: SGK Lịch sử 10 – Kết nối tri thức, Chủ đề 3, Bài 5 và Bài 6; UNESCO World Heritage Centre; Encyclopaedia Britannica; National Geographic Education; Wikimedia Commons (ảnh minh họa).</p></section>
+<section class="slide cover" data-no="13"><div class="cover-sticker">✦ DI SẢN ✦</div><div class="kicker">Kết luận</div><h2 class="title">QUÁ KHỨ ĐỂ HIỂU<br><em>HIỆN TẠI & TƯƠNG LAI</em></h2><div class="goldline"></div><p class="intro">Mỗi nền văn minh là một cách con người thích nghi với tự nhiên, tổ chức xã hội và sáng tạo tri thức. Tìm hiểu lịch sử giúp chúng ta trân trọng sự đa dạng, hiểu nguồn gốc di sản và có trách nhiệm gìn giữ chúng.</p><p class="note">Tư liệu học tập: SGK Lịch sử 10 – Kết nối tri thức, Chủ đề 3, Bài 5 và Bài 6; UNESCO World Heritage Centre; Encyclopaedia Britannica; National Geographic Education; Wikimedia Commons (ảnh minh họa).</p></section>
 </main>
 <div class="controls"><button class="arrow" id="prev" aria-label="Slide trước">←</button><div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="dots" id="dots" aria-label="Chọn slide"></div><div class="counter" id="counter">01 / 13</div><button class="arrow" id="next" aria-label="Slide tiếp">→</button></div>
 <script>
 const slides=[...document.querySelectorAll('.slide')],dotsBox=document.getElementById('dots'),counter=document.getElementById('counter'),progress=document.getElementById('progress'),prev=document.getElementById('prev'),next=document.getElementById('next');let currentIndex=0;
-slides.forEach((s,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','Đến slide '+(i+1));b.title='Slide '+(i+1);b.addEventListener('click',()=>show(i));dotsBox.appendChild(b)});
-function show(i){currentIndex=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>{s.classList.toggle('active',j===currentIndex);s.setAttribute('aria-hidden',j===currentIndex?'false':'true');if(j===currentIndex)s.scrollTop=0});[...dotsBox.children].forEach((d,j)=>{d.classList.toggle('active',j===currentIndex);d.setAttribute('aria-current',j===currentIndex?'step':'false')});counter.textContent=String(currentIndex+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');progress.style.width=((currentIndex+1)/slides.length*100)+'%';prev.disabled=currentIndex===0;next.disabled=currentIndex===slides.length-1;history.replaceState(null,'','#slide-'+(currentIndex+1))}
+slides.forEach((s,i)=>{const stickers=['🏺','🧿','📜','🪷','✨','🏛️','🗺️','🔎','💫','📚','🪙','🌟','🦉'];const st=document.createElement('span');st.className='sticker'+(i%3===1?' left':'');st.textContent=stickers[i]+' '+['Khám phá','Bạn có biết?','Fact thú vị','Mở khóa bí mật'][i%4];s.appendChild(st);const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','Đến slide '+(i+1));b.title='Slide '+(i+1);b.addEventListener('click',()=>show(i));dotsBox.appendChild(b)});
+function show(i){const old=currentIndex;const target=Math.max(0,Math.min(slides.length-1,i));const direction=target>=old?'next':'prev';currentIndex=target;slides.forEach((s,j)=>{s.classList.toggle('active',j===currentIndex);s.dataset.direction=direction;s.setAttribute('aria-hidden',j===currentIndex?'false':'true');if(j===currentIndex)s.scrollTop=0});[...dotsBox.children].forEach((d,j)=>{d.classList.toggle('active',j===currentIndex);d.setAttribute('aria-current',j===currentIndex?'step':'false')});counter.textContent=String(currentIndex+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');progress.style.width=((currentIndex+1)/slides.length*100)+'%';prev.disabled=currentIndex===0;next.disabled=currentIndex===slides.length-1;history.replaceState(null,'','#slide-'+(currentIndex+1))}
 prev.addEventListener('click',()=>show(currentIndex-1));next.addEventListener('click',()=>show(currentIndex+1));document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key)){e.preventDefault();show(currentIndex+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(currentIndex-1)}else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1)});let touchX=0;document.getElementById('deck').addEventListener('touchstart',e=>{touchX=e.changedTouches[0].screenX},{passive:true});document.getElementById('deck').addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-touchX;if(Math.abs(dx)>65)show(currentIndex+(dx<0?1:-1))},{passive:true});const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
 </script></body></html>
