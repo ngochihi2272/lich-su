@@ -395,5 +395,6 @@ function initQuiz(){
  nextBtn.addEventListener('click',()=>{if(!answered)return;if(index<questions.length-1){index++;render()}else finish()});
  restart.addEventListener('click',()=>{index=0;score=0;render()});render();
 }
-\nsetupReveals();initGame();initQuiz();const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
+
+setupReveals();initGame();initQuiz();const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
 </script></body></html>
