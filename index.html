@@ -189,7 +189,7 @@ body{font-size:18px;font-family:'Nunito',sans-serif}
 .slide .sticker{top:clamp(20px,4vh,42px)}
 /* staged PowerPoint-style reveals */
 .reveal-item{opacity:0;visibility:hidden;transform:translateY(42px) scale(.82) rotate(-3deg);filter:blur(7px);pointer-events:none}
-.reveal-item.is-revealed{visibility:visible;pointer-events:auto;animation:burstReveal .72s cubic-bezier(.16,1.3,.35,1) both}
+.reveal-item.is-revealed{visibility:visible;pointer-events:auto;animation:burstReveal .72s cubic-bezier(.16,1.3,.35,1) both}.slide.active .reveal-item.is-revealed{animation:burstReveal .72s cubic-bezier(.16,1.3,.35,1) both}
 @keyframes burstReveal{0%{opacity:0;transform:translateY(42px) scale(.55) rotate(-8deg);filter:blur(8px)}58%{opacity:1;transform:translateY(-8px) scale(1.07) rotate(2deg);filter:blur(0)}78%{transform:translateY(3px) scale(.98) rotate(-1deg)}100%{opacity:1;transform:none;filter:none}}
 .reveal-hint{position:fixed;z-index:21;left:50%;bottom:88px;transform:translateX(-50%);padding:9px 17px;border:1px solid #e9c98799;border-radius:999px;background:#28190feF;color:#ffe9bd;font:800 .88rem 'Nunito';box-shadow:0 6px 20px #0005;pointer-events:none;white-space:nowrap;animation:hintPulse 1.8s infinite}
 @keyframes hintPulse{50%{transform:translateX(-50%) translateY(-4px);box-shadow:0 10px 25px #0007}}
