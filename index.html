@@ -212,6 +212,49 @@ body{font-size:18px;font-family:'Nunito',sans-serif}
 .game-win{display:none;text-align:center;margin:16px auto 0;padding:15px 22px;border-radius:20px;background:linear-gradient(120deg,#66794a,#334a32);border:1px solid #d9e9bd;color:#f5ffdf;font:800 1.1rem 'Baloo 2';animation:burstReveal .7s both}
 .game-win.show{display:block}
 @media(max-width:760px){.slide:before{inset:8px}.title{font-size:clamp(2.7rem,10vw,4.4rem)}.intro{font-size:1.05rem}.point p{font-size:1rem}.photo img{height:170px}.match-board{gap:10px}.match-card{padding:10px 9px;gap:7px;min-height:72px;font-size:.85rem}.match-card span{font-size:1.3rem;min-width:25px}.match-heading{font-size:.75rem}.game-footer{padding:12px}.game-status{font-size:.85rem}.game-actions{font-size:.82rem;gap:8px}.reveal-hint{font-size:.72rem;bottom:78px}}
+
+/* Final typography + slide 5 fit correction */
+html{font-size:16px}
+body{font-size:16px}
+.title{font-size:clamp(2.15rem,4.2vw,4.1rem);line-height:1.12;max-width:1000px}
+.intro{font-size:clamp(.98rem,1.25vw,1.12rem);line-height:1.65;max-width:900px}
+.kicker{font-size:.76rem;padding:7px 13px}
+.point{padding:13px 16px}
+.point b{font-size:1.08rem}
+.point p{font-size:.94rem;line-height:1.55}
+.fact{padding:15px}
+.fact b{font-size:1.45rem}
+.fact span{font-size:.88rem;line-height:1.5}
+.photo figcaption{font-size:.82rem;padding:9px 12px}
+.note{font-size:.78rem;line-height:1.55}
+.slide .sticker{font-size:.78rem;padding:7px 12px}
+.cover .title{font-size:clamp(3rem,7vw,6.4rem)}
+/* Slide 5: balanced two-column layout and controlled image height */
+.slide[data-no="05"]{justify-content:flex-start;padding-top:clamp(42px,7vh,76px)}
+.slide[data-no="05"] .title{font-size:clamp(2rem,3.7vw,3.55rem);max-width:900px;margin-bottom:12px}
+.slide[data-no="05"] .layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,2.4vw,30px);align-items:start}
+.slide[data-no="05"] .intro{font-size:1rem;line-height:1.58;margin-bottom:14px}
+.slide[data-no="05"] .points{gap:9px}
+.slide[data-no="05"] .point{padding:11px 14px}
+.slide[data-no="05"] .point b{font-size:1rem}
+.slide[data-no="05"] .point p{font-size:.88rem;line-height:1.48}
+.slide[data-no="05"] .gallery{grid-template-columns:1fr 1fr;gap:9px}
+.slide[data-no="05"] .gallery .photo:first-child{grid-column:1 / -1}
+.slide[data-no="05"] .gallery .photo img{height:clamp(115px,17vh,175px)}
+.slide[data-no="05"] .gallery .photo:first-child img{height:clamp(150px,22vh,220px)}
+.slide[data-no="05"] .note{margin-top:12px}
+@media(max-width:760px){
+ .title{font-size:clamp(2rem,7.5vw,3.2rem)}
+ .intro{font-size:.96rem;line-height:1.58}
+ .point b{font-size:1rem}
+ .point p{font-size:.88rem;line-height:1.5}
+ .slide[data-no="05"]{padding-top:48px}
+ .slide[data-no="05"] .title{font-size:clamp(1.9rem,7vw,2.7rem)}
+ .slide[data-no="05"] .layout{grid-template-columns:1fr}
+ .slide[data-no="05"] .gallery .photo img{height:130px}
+ .slide[data-no="05"] .gallery .photo:first-child img{height:175px}
+ .slide .sticker{font-size:.66rem;padding:6px 9px}
+}
 </style></head><body>
 <main class="deck" id="deck">
 <section class="slide cover active" data-no="01"><div class="kicker">LỊCH SỬ 10 · KẾT NỐI TRI THỨC · CHỦ ĐỀ 3</div><h1 class="title">NHỮNG NỀN<br><em>VĂN MINH</em><br>THẾ GIỚI</h1><div class="goldline"></div><p class="intro">Phương Đông và phương Tây thời kì cổ – trung đại<br>Điều kiện hình thành · Thành tựu · Câu chuyện · Di sản hôm nay</p><p class="note">Bài 5 và Bài 6 · Trình chiếu bằng nút mũi tên hoặc phím ← →</p></section>
@@ -240,7 +283,7 @@ body{font-size:18px;font-family:'Nunito',sans-serif}
 
 <section class="slide cover" data-no="13"><div class="cover-sticker">✦ DI SẢN ✦</div><div class="kicker">Kết luận</div><h2 class="title">QUÁ KHỨ ĐỂ HIỂU<br><em>HIỆN TẠI & TƯƠNG LAI</em></h2><div class="goldline"></div><p class="intro">Mỗi nền văn minh là một cách con người thích nghi với tự nhiên, tổ chức xã hội và sáng tạo tri thức. Tìm hiểu lịch sử giúp chúng ta trân trọng sự đa dạng, hiểu nguồn gốc di sản và có trách nhiệm gìn giữ chúng.</p><p class="note">Tư liệu học tập: SGK Lịch sử 10 – Kết nối tri thức, Chủ đề 3, Bài 5 và Bài 6; UNESCO World Heritage Centre; Encyclopaedia Britannica; National Geographic Education; Wikimedia Commons (ảnh minh họa).</p></section>
 <section class="slide game-slide" data-no="14"><div class="kicker">12 · Mini game củng cố</div><h2 class="title">Ghép đúng — mở khóa <em>di sản</em>!</h2><p class="intro">Chọn một nền văn minh ở cột trái, rồi chọn thành tựu tương ứng ở cột phải. Ghép đủ 4 cặp để mở khóa huy hiệu Nhà khảo cổ nhí 🏺</p><div class="match-board"><div class="match-column"><div class="match-heading">🏛️ NỀN VĂN MINH</div><button class="match-card" data-side="a" data-pair="egypt"><span>𓂀</span><b>Ai Cập</b></button><button class="match-card" data-side="a" data-pair="china"><span>🐉</span><b>Trung Hoa</b></button><button class="match-card" data-side="a" data-pair="meso"><span>𒀭</span><b>Lưỡng Hà</b></button><button class="match-card" data-side="a" data-pair="india"><span>🪷</span><b>Ấn Độ</b></button></div><div class="match-column"><div class="match-heading">✨ THÀNH TỰU / DẤU ẤN</div><button class="match-card" data-side="b" data-pair="india"><span>०</span><b>Số 0 và hệ thập phân</b></button><button class="match-card" data-side="b" data-pair="egypt"><span>𓉐</span><b>Chữ tượng hình, kim tự tháp</b></button><button class="match-card" data-side="b" data-pair="china"><span>📜</span><b>Giấy, kĩ thuật in, la bàn</b></button><button class="match-card" data-side="b" data-pair="meso"><span>⚖️</span><b>Chữ hình nêm, luật Hammurabi</b></button></div></div><div class="game-footer"><div class="game-status" id="gameStatus" aria-live="polite">💡 Mẹo: nhớ lại thành tựu đặc trưng của từng nền văn minh nhé!</div><div class="game-actions"><span id="gameScore">0 / 4 cặp đúng</span><button class="game-reset" id="gameReset">↻ Chơi lại</button></div></div><div class="game-win" id="gameWin">🏆 XUẤT SẮC! Cậu đã mở khóa huy hiệu NHÀ KHẢO CỔ NHÍ!</div></section></main>
-<div class="controls"><button class="arrow" id="prev" aria-label="Slide trước">←</button><div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="dots" id="dots" aria-label="Chọn slide"></div><div class="counter" id="counter">01 / 13</div><button class="arrow" id="next" aria-label="Slide tiếp">→</button></div>
+<div class="controls"><button class="arrow" id="prev" aria-label="Slide trước">←</button><div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="dots" id="dots" aria-label="Chọn slide"></div><div class="counter" id="counter">01 / 14</div><button class="arrow" id="next" aria-label="Slide tiếp">→</button></div>
 <div class="viewer" id="viewer" aria-label="Trình xem ảnh" aria-modal="true" role="dialog"><span class="viewer-hint">CHẠM VÀO ẢNH ĐỂ XOAY 360° · DÙNG MŨI TÊN ĐỂ ĐỔI ẢNH</span><button class="viewer-btn viewer-close" id="viewerClose" aria-label="Đóng">×</button><figure><img id="viewerImg" alt=""><figcaption id="viewerCaption"></figcaption></figure><div class="viewer-tools"><button class="viewer-btn" id="viewerPrev">← Ảnh trước</button><button class="viewer-btn" id="viewerSpin">✦ Xoay ảnh</button><button class="viewer-btn" id="viewerNext">Ảnh tiếp →</button></div></div>
 <script>
 const slides=[...document.querySelectorAll('.slide')],dotsBox=document.getElementById('dots'),counter=document.getElementById('counter'),progress=document.getElementById('progress'),prev=document.getElementById('prev'),next=document.getElementById('next');let currentIndex=0;
