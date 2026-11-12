@@ -502,6 +502,13 @@ renderQuestion();
 const photos=Array.from(document.querySelectorAll('.photo'));
 const viewer=document.getElementById('viewer'),viewerImg=document.getElementById('viewerImg'),viewerCaption=document.getElementById('viewerCaption');
 let photoIndex=0;
+photos.forEach((photo,i)=>{
+ photo.setAttribute('tabindex','0');
+ photo.setAttribute('role','button');
+ const img=photo.querySelector('img');
+ photo.setAttribute('aria-label','Phóng to ảnh: '+(img?.alt||'hình minh họa')+'. Nhấn Enter để mở.');
+ photo.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();photo.click();}});
+});
 function renderPhoto(){
  const photo=photos[photoIndex];if(!photo||!viewerImg)return;
  const img=photo.querySelector('img'),caption=photo.querySelector('figcaption');
