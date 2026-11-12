@@ -295,5 +295,5 @@ document.getElementById('viewerSpin').addEventListener('click',spinPhoto);
 viewer.addEventListener('click',e=>{if(e.target===viewer)closePhoto()});
 document.addEventListener('keydown',e=>{if(!viewer.classList.contains('open'))return;if(e.key==='Escape')closePhoto();if(e.key==='ArrowRight'){photoIndex=(photoIndex+1)%allPhotos.length;renderPhoto()}if(e.key==='ArrowLeft'){photoIndex=(photoIndex-1+allPhotos.length)%allPhotos.length;renderPhoto()}});
 
-const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
+setupReveals();initGame();const m=location.hash.match(/slide-(\d+)/);show(m?Number(m[1])-1:0);
 </script></body></html>
